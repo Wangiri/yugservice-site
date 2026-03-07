@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="ru" itemscope itemtype="http://schema.org/LocalBusiness">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+    <!-- ========== SEO: Основные мета-теги ========== -->
+    <title>ЮГСервисКомплекс – ремонт и обслуживание техники в Сочи</title>
+    <meta name="description"
+        content="Профессиональный ремонт и обслуживание: принтеры, ноутбуки, ПК, видеонаблюдение, вентиляция, промышленное оборудование в Сочи. Бесплатная диагностика, выезд мастера, гарантия до 12 месяцев.">
+    <meta name="keywords"
+        content="ремонт принтеров Сочи, ремонт ноутбуков Сочи, обслуживание оргтехники, видеонаблюдение Сочи, ремонт вентиляции, промышленное оборудование, ЮГСервисКомплекс">
+    <meta name="author" content="ЮГСервисКомплекс">
+    <meta name="robots" content="index, follow">
+    <meta name="yandex-verification" content="1234567890">
+    <meta name="google-site-verification" content="1234567890">
+
+    <!-- ========== Open Graph ========== -->
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ЮГСервисКомплекс – сервисный центр в Сочи">
+    <meta property="og:description"
+        content="Ремонт и обслуживание любой техники. Бесплатная диагностика, выезд мастера. Работаем с организациями и частными лицами.">
+    <meta property="og:url" content="https://yugservice.ru">
+    <meta property="og:site_name" content="ЮГСервисКомплекс">
+    <meta property="og:image" content="https://yugservice.ru/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- ========== Favicon ========== -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- ========== Canonical URL ========== -->
+    <link rel="canonical" href="https://yugservice.ru">
+
+    <!-- ========== Preload шрифтов и стилей ========== -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
+
+    <!-- ========== Tailwind CSS ========== -->
+    <link rel="stylesheet" href="/dist/output.css">
+
+    <!-- ========== Schema.org ========== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "ЮГСервисКомплекс",
+        "image": "https://yugservice.ru/logo.png",
+        "logo": "https://yugservice.ru/logo.png",
+        "telephone": "+79891680048",
+        "email": "usk2023@mail.ru",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ул. Донская, д.10, офис 107",
+            "addressLocality": "Сочи",
+            "addressRegion": "Краснодарский край",
+            "postalCode": "354000",
+            "addressCountry": "RU"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "43.5855",
+            "longitude": "39.7231"
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+            }
+        ],
+        "priceRange": "₽₽",
+        "sameAs": [
+            "https://vk.com/yugservice",
+            "https://t.me/yugservice"
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "45"
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": "Сочи"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Услуги по ремонту",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Ремонт принтеров"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Ремонт ноутбуков"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Видеонаблюдение"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+
+    <!-- Дополнительные стили для исправления косяков и защиты от копирования -->
+    <style>
+        /* Фикс для логотипа на мобильных */
+        @media (max-width: 480px) {
+            .logo-text {
+                font-size: 0.9rem !important;
+                max-width: 140px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .logo-sub {
+                display: none;
+            }
+        }
+
+        /* Десктопный хедер: убрана лишняя кнопка, только телефон */
+        .desktop-phone-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Модальное окно: красивее, уже */
+        #modalOverlay {
+            backdrop-filter: blur(8px);
+        }
+
+        #modalContent {
+            max-width: 22rem;
+            border-radius: 2rem;
+            background: linear-gradient(145deg, #ffffff 0%, #f9fafc 100%);
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        #modalContent input,
+        #modalContent textarea {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s;
+            border-radius: 1rem;
+            padding: 0.875rem 1.25rem;
+        }
+
+        #modalContent input:focus,
+        #modalContent textarea:focus {
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+            background: white;
+        }
+
+        #modalContent h3 {
+            background: linear-gradient(135deg, #3b82f6, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-icon {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .modal-icon i {
+            font-size: 3rem;
+            background: linear-gradient(135deg, #3b82f6, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Карта на всю ширину */
+        .map-container {
+            width: 100%;
+            margin-top: 2rem;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border-radius: 1.5rem;
+            display: block;
+        }
+
+        @media (min-width: 768px) {
+            .map-container iframe {
+                height: 400px;
+            }
+        }
+
+        /* Блок "О нас": фикс цифр на мобильных */
+        .stats-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 1rem;
+        }
+
+        .stat-item {
+            flex: 1 0 80px;
+            text-align: center;
+            min-width: 80px;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #3b82f6;
+            line-height: 1.2;
+        }
+
+        @media (max-width: 480px) {
+            .stat-number {
+                font-size: 1.75rem;
+            }
+
+            .stat-label {
+                font-size: 0.7rem;
+            }
+        }
+
+        /* Контакты: исправление отступов для двух телефонов */
+        .contact-phone-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-phone-item i {
+            width: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        /* Кнопка телефона в мобильном хедере по центру */
+        .mobile-phone-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem 0.75rem;
+            background: linear-gradient(to right, #3b82f6, #a855f7);
+            color: white;
+            border-radius: 0.75rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            gap: 0.25rem;
+        }
+
+        .mobile-phone-btn i {
+            font-size: 1rem;
+        }
+
+        /* Нижняя навигация не перекрывает контент */
+        body {
+            padding-bottom: 70px;
+        }
+
+        @media (min-width: 1024px) {
+            body {
+                padding-bottom: 0;
+            }
+        }
+
+        /* Исправление иконок в блоке преимуществ */
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .benefit-item i {
+            flex-shrink: 0;
+            width: 1.25rem;
+            text-align: center;
+        }
+
+        /* Защита от копирования */
+        body {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        input, textarea {
+            user-select: text;
+        }
+        img {
+            pointer-events: none;
+            -webkit-user-drag: none;
+            user-drag: none;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-br from-slate-50 via-white to-blue-50 antialiased">
+
+    <!-- ========== ШАПКА (ДЕСКТОП) ========== -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass hidden lg:block">
+        <div class="container mx-auto px-4 xl:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Логотип и название - адаптивный текст -->
+                <div class="flex items-center space-x-3 min-w-0 flex-shrink-0">
+                    <div
+                        class="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center shadow-lg flex-shrink-0">
+                        <span class="text-white font-bold text-xl">ЮСК</span>
+                    </div>
+                    <div class="min-w-0">
+                        <h1
+                            class="text-xl xl:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent truncate logo-text">
+                            ЮГСервисКомплекс</h1>
+                        <p class="text-xs xl:text-sm text-slate-600 truncate logo-sub">Ремонт и обслуживание в Сочи</p>
+                    </div>
+                </div>
+
+                <!-- Навигация -->
+                <nav class="flex items-center justify-center flex-1 mx-4 min-w-0">
+                    <div class="flex items-center justify-center space-x-4 xl:space-x-8">
+                        <a href="#home"
+                            class="text-base text-slate-700 hover:text-blue-600 font-medium px-2 py-1 whitespace-nowrap transition-colors">Главная</a>
+                        <a href="#services"
+                            class="text-base text-slate-700 hover:text-blue-600 font-medium px-2 py-1 whitespace-nowrap transition-colors">Услуги</a>
+                        <a href="#about"
+                            class="text-base text-slate-700 hover:text-blue-600 font-medium px-2 py-1 whitespace-nowrap transition-colors">О
+                            нас</a>
+                        <a href="#reviews"
+                            class="text-base text-slate-700 hover:text-blue-600 font-medium px-2 py-1 whitespace-nowrap transition-colors">Отзывы</a>
+                        <a href="#contacts"
+                            class="text-base text-slate-700 hover:text-blue-600 font-medium px-2 py-1 whitespace-nowrap transition-colors">Контакты</a>
+                    </div>
+                </nav>
+
+                <!-- Только телефон (кнопка заявки убрана) -->
+                <div class="flex items-center justify-end space-x-2 flex-shrink-0">
+                    <a href="tel:+79891680048"
+                        class="desktop-phone-btn px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-bold hover:shadow-lg transition-all whitespace-nowrap text-sm xl:text-base">
+                        <i class="fas fa-phone mr-2"></i>
+                        <span class="font-mono">+7 (989) 168-00-48</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== МОБИЛЬНЫЙ ХЕДЕР ========== -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass lg:hidden" id="mobileHeader">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <!-- Логотип - с адаптацией -->
+                <div class="flex items-center space-x-3 min-w-0">
+                    <div
+                        class="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center shrink-0">
+                        <span class="text-white font-bold">ЮСК</span>
+                    </div>
+                    <div class="min-w-0">
+                        <h1
+                            class="text-base sm:text-lg font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent truncate logo-text">
+                            ЮГСервисКомплекс</h1>
+                        <p class="text-xs text-slate-600 truncate hidden xs:block logo-sub">Сервис в Сочи</p>
+                    </div>
+                </div>
+
+                <!-- Кнопки: телефон + меню (телефон выровнен по центру) -->
+                <div class="flex items-center space-x-3">
+                    <a href="tel:+79891680048" class="mobile-phone-btn">
+                        <i class="fas fa-phone"></i>
+                        <span class="hidden xs:inline">+7 (989)...</span>
+                    </a>
+                    <button id="menuButton"
+                        class="w-10 h-10 rounded-lg flex items-center justify-center hover:bg-slate-100 transition-colors">
+                        <i class="fas fa-bars text-slate-700 text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Мобильное меню -->
+            <div id="mobileMenu"
+                class="absolute top-full left-0 right-0 glass border-t border-slate-200/50 shadow-xl hidden">
+                <div class="p-4 space-y-3">
+                    <a href="#home" class="block px-4 py-3 rounded-lg hover:bg-slate-100 font-medium"><i
+                            class="fas fa-home mr-3 text-blue-600 w-5 text-center"></i>Главная</a>
+                    <a href="#services" class="block px-4 py-3 rounded-lg hover:bg-slate-100 font-medium"><i
+                            class="fas fa-cogs mr-3 text-blue-600 w-5 text-center"></i>Услуги</a>
+                    <a href="#about" class="block px-4 py-3 rounded-lg hover:bg-slate-100 font-medium"><i
+                            class="fas fa-building mr-3 text-blue-600 w-5 text-center"></i>О нас</a>
+                    <a href="#reviews" class="block px-4 py-3 rounded-lg hover:bg-slate-100 font-medium"><i
+                            class="fas fa-star mr-3 text-blue-600 w-5 text-center"></i>Отзывы</a>
+                    <a href="#contacts" class="block px-4 py-3 rounded-lg hover:bg-slate-100 font-medium"><i
+                            class="fas fa-map-marker-alt mr-3 text-blue-600 w-5 text-center"></i>Контакты</a>
+
+                    <!-- Кнопка заявки в мобильном меню -->
+                    <div class="pt-4 border-t border-slate-200">
+                        <button onclick="openModal()"
+                            class="w-full px-4 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold text-center active:scale-95 transition-transform">
+                            <i class="fas fa-edit mr-2"></i>Оставить заявку
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-16 lg:pt-20">
+
+        <!-- ========== ГЕРОЙ (расширенное описание) ========== -->
+        <section id="home" class="relative overflow-hidden min-h-screen flex items-center gradient-primary">
+            <!-- Анимированные фоновые элементы -->
+            <div class="absolute inset-0 overflow-hidden">
+                <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl animate-pulse">
+                </div>
+                <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse"
+                    style="animation-delay: 1s;"></div>
+            </div>
+
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Текст -->
+                    <div class="animate-fade-in-up">
+                        <!-- Бейдж -->
+                        <div class="inline-flex items-center px-4 py-2 glass rounded-full mb-8 shadow-sm">
+                            <div
+                                class="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-star text-white text-sm"></i>
+                            </div>
+                            <span class="font-semibold text-slate-800">4.8/5 • 45+ отзывов • Сочи</span>
+                        </div>
+
+                        <h1 class="responsive-heading font-bold mb-6">
+                            <span class="text-slate-900">Ремонт и обслуживание</span>
+                            <span
+                                class="block bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">любой
+                                техники в Сочи</span>
+                        </h1>
+
+                        <p class="responsive-text text-slate-600 mb-6 max-w-2xl">
+                            Принтеры, ноутбуки, ПК, видеонаблюдение, вентиляция, промышленное оборудование.
+                            Бесплатная диагностика, выезд мастера, гарантия до 12 месяцев.
+                        </p>
+
+                        <!-- Расширенное описание -->
+                        <p class="text-slate-600 mb-6 max-w-2xl">
+                            Обслуживаем детские сады, школы, отели и предприятия. Оперативный ремонт плоттеров,
+                            ризографов, аудио/видеооборудования.
+                            Поставляем картриджи производства РФ и расходные материалы.
+                        </p>
+
+                        <!-- Преимущества (адаптивные) -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+                            <div class="benefit-item"><i class="fas fa-check-circle text-green-500"></i>Бесплатная
+                                диагностика</div>
+                            <div class="benefit-item"><i class="fas fa-truck text-blue-500"></i>Выезд по Сочи</div>
+                            <div class="benefit-item"><i class="fas fa-shield-alt text-purple-500"></i>Гарантия 12 мес.
+                            </div>
+                            <div class="benefit-item"><i class="fas fa-clock text-orange-500"></i>Срочный ремонт</div>
+                            <div class="benefit-item"><i class="fas fa-wrench text-indigo-500"></i>Собственная сервисная
+                                служба</div>
+                            <div class="benefit-item"><i class="fas fa-file-signature text-emerald-500"></i>Договоры с
+                                организациями</div>
+                        </div>
+
+                        <!-- Кнопки: Прайс-лист и Заявка -->
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="#services"
+                                class="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-bold text-center shadow-lg hover:shadow-xl transition-all">
+                                <i class="fas fa-file-invoice mr-2"></i>Прайс-лист
+                            </a>
+                            <button onclick="openModal()"
+                                class="px-8 py-4 glass rounded-xl font-bold text-center shadow-sm hover:shadow-md transition-all">
+                                <i class="fas fa-edit mr-2 text-blue-600"></i>Оставить заявку
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Изображение (иконка) -->
+                    <div class="relative animate-fade-in-up" style="animation-delay: 0.3s;">
+                        <div class="glass rounded-3xl p-8 shadow-2xl animate-float">
+                            <div>
+                               <img src="/src/img/group-confident-men-blue-uniforms-posing-factory-setting.jpg" alt="Команда специалистов">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== УСЛУГИ (ИНТЕРАКТИВНАЯ ТАБЛИЦА) ========== -->
+        <section id="services" class="py-20 lg:py-32">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="responsive-subheading font-bold mb-6">
+                        <span class="text-slate-900">Услуги по ремонту и</span>
+                        <span
+                            class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">обслуживанию</span>
+                    </h2>
+                    <p class="responsive-text text-slate-600 max-w-3xl mx-auto">
+                        Выберите направление, чтобы увидеть цены и описания
+                    </p>
+                </div>
+
+                <!-- Фильтры -->
+                <div class="flex flex-wrap justify-center gap-3 mb-10" id="service-filters"></div>
+
+                <!-- Таблица услуг -->
+                <div class="overflow-x-auto rounded-2xl shadow-lg">
+                    <table class="w-full text-sm text-left text-gray-700" id="services-table">
+                        <thead class="text-xs uppercase bg-gray-100 text-gray-700">
+                            <tr>
+                                <th scope="col" class="px-6 py-4">Услуга</th>
+                                <th scope="col" class="px-6 py-4">Описание</th>
+                                <th scope="col" class="px-6 py-4">Цена (₽)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="services-table-body">
+                            <!-- будут заполнены js -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="text-center text-slate-500 text-sm mt-6">* Точная стоимость после диагностики. Выезд мастера –
+                    от 500₽.</p>
+
+                <!-- Кнопка заявки под таблицей -->
+                <div class="text-center mt-10">
+                    <button onclick="openModal()"
+                        class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-bold shadow-lg hover:shadow-xl transition-all">
+                        <i class="fas fa-edit mr-2"></i>Бесплатная консультация
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== О НАС (С ФОТО) ========== -->
+        <section id="about" class="py-20 lg:py-32 bg-slate-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="responsive-subheading font-bold mb-6">
+                        <span class="text-slate-900">О компании</span>
+                        <span
+                            class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">ЮГСервисКомплекс</span>
+                    </h2>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <!-- Текст -->
+                    <div class="glass p-6 md:p-8 rounded-3xl order-2 lg:order-1">
+                        <p class="text-base md:text-lg text-slate-700 mb-4">
+                            Мы специализируемся на ремонте и обслуживании различной техники в Сочи с 2023 года. Наши
+                            клиенты — детские сады, школы, отели, производственные предприятия и частные лица.
+                        </p>
+                        <p class="text-base md:text-lg text-slate-700 mb-4">
+                            В штате — сертифицированные инженеры с опытом работы от 5 лет. Используем профессиональное
+                            оборудование и оригинальные запчасти.
+                        </p>
+                        <p class="text-base md:text-lg text-slate-700 mb-4">
+                            Работаем быстро, с гарантией до 12 месяцев. Выезжаем по всему Сочи и ближайшим населённым
+                            пунктам.
+                        </p>
+                        <!-- Статистика (исправлено наезжание) -->
+                        <div class="stats-grid mt-6">
+                            <div class="stat-item">
+                                <div class="stat-number">5+</div>
+                                <div class="stat-label text-slate-500 text-sm">лет опыта</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">200+</div>
+                                <div class="stat-label text-slate-500 text-sm">организаций</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">12</div>
+                                <div class="stat-label text-slate-500 text-sm">мес. гарантии</div>
+                            </div>
+                        </div>
+                    </div>
+                <!-- Фото (адаптивное, без обрезания) -->
+                <div class="order-1 lg:order-2 flex justify-center">
+                    <img src="src/img/printer-working-offset-machine.jpg" alt="Работа с оборудованием"
+                        class="w-full h-auto max-h-[350px] lg:max-h-[450px] object-contain rounded-3xl shadow-2xl">
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== ОТЗЫВЫ ========== -->
+        <section id="reviews" class="py-20 lg:py-32">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="responsive-subheading font-bold mb-6">
+                        <span class="text-slate-900">Отзывы наших</span>
+                        <span
+                            class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">клиентов</span>
+                    </h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="glass p-6 rounded-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                <span class="text-blue-600 font-bold">А</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Анна, детский сад №23</h4>
+                                <div class="text-yellow-400 text-sm">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="text-slate-600">Быстро починили принтер, заменили картридж. Мастер приехал в тот же
+                            день. Очень довольны!</p>
+                    </div>
+                    <div class="glass p-6 rounded-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                <span class="text-blue-600 font-bold">М</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Михаил, отель «Морской»</h4>
+                                <div class="text-yellow-400 text-sm">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="text-slate-600">Обслуживаем кондиционеры и вентиляцию у них уже год. Никаких
+                            нареканий, всё чётко и в срок.</p>
+                    </div>
+                    <div class="glass p-6 rounded-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                <span class="text-blue-600 font-bold">Е</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Елена, школа №10</h4>
+                                <div class="text-yellow-400 text-sm">★★★★★</div>
+                            </div>
+                        </div>
+                        <p class="text-slate-600">Починили ноутбуки для учителей, установили Windows. Всё быстро и
+                            недорого. Спасибо!</p>
+                    </div>
+                </div>
+                <div class="text-center mt-10">
+                    <a href="https://yandex.ru/maps/org/yugserviskompleks/123456789/reviews/" target="_blank"
+                        rel="nofollow noopener"
+                        class="inline-flex items-center px-6 py-3 bg-yellow-400 text-slate-900 rounded-xl font-medium hover:bg-yellow-500 transition-all">
+                        <i class="fab fa-yandex mr-2"></i>Читать все отзывы на Яндекс.Картах
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    <!-- ========== КОНТАКТЫ ========== -->
+    <section id="contacts" class="py-20 lg:py-32 bg-slate-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="responsive-subheading font-bold mb-6">
+                    <span class="text-slate-900">Как с нами</span>
+                    <span
+                        class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">связаться</span>
+                </h2>
+            </div>
+    
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Контактная информация -->
+                <div class="glass p-6 md:p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold mb-6">Контакты</h3>
+                    <div class="space-y-4">
+                        <!-- Адрес -->
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-blue-600 mt-1 mr-4 text-xl flex-shrink-0"></i>
+                            <div class="text-sm md:text-base">354000, Краснодарский край, г. Сочи, ул. Донская, д.10, офис
+                                107</div>
+                        </div>
+                        <!-- Телефоны (два) -->
+                        <div class="flex items-start">
+                            <i class="fas fa-phone-alt text-blue-600 mt-1 mr-4 text-xl flex-shrink-0"></i>
+                            <div>
+                                <div class="contact-phone-item">
+                                    <a href="tel:+79891680048" class="hover:text-blue-600">+7 (989) 168-00-48</a>
+                                </div>
+                                <div class="contact-phone-item">
+                                    <a href="tel:+79384405344" class="hover:text-blue-600">+7 (938) 440-53-44</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Email -->
+                        <div class="flex items-start">
+                            <i class="fas fa-envelope text-blue-600 mt-1 mr-4 text-xl flex-shrink-0"></i>
+                            <a href="mailto:usk2023@mail.ru" class="hover:text-blue-600 break-all">usk2023@mail.ru</a>
+                        </div>
+                        <!-- Время работы -->
+                        <div class="flex items-start">
+                            <i class="fas fa-clock text-blue-600 mt-1 mr-4 text-xl flex-shrink-0"></i>
+                            <div>Пн–Пт: 9:00–18:00<br>Сб–Вс: по договорённости</div>
+                        </div>
+                    </div>
+    
+                    <!-- Соцсети -->
+                    <div class="flex space-x-4 mt-8">
+                        <a href="#"
+                            class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all"><i
+                                class="fab fa-vk"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all"><i
+                                class="fab fa-telegram"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center hover:bg-green-600 hover:text-white transition-all"><i
+                                class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <!-- Кнопка заявки (убрана) -->
+                </div>
+    
+                <!-- Форма обратной связи -->
+                <div class="glass p-6 md:p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold mb-6">Напишите нам</h3>
+                    <form id="contactForm">
+                        <input type="text" placeholder="Ваше имя"
+                            class="w-full mb-4 px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 outline-none"
+                            required>
+                        <input type="tel" placeholder="+7 (___) ___-__-__"
+                            class="w-full mb-4 px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 outline-none"
+                            required>
+                        <textarea placeholder="Опишите задачу" rows="4"
+                            class="w-full mb-4 px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-500 outline-none"></textarea>
+                        <button type="submit"
+                            class="w-full px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-bold hover:shadow-lg transition-all">Отправить</button>
+                    </form>
+                </div>
+            </div>
+    
+            <!-- Карта (на всю ширину) -->
+            <div class="map-container">
+                <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3Aebf8b1f8c8c8c8c8c8c8c8c8c8c8c8c8c8c8c8&source=constructor"
+                    frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- ========== ФУТЕР ========== -->
+    <footer class="bg-gradient-to-br from-slate-900 to-slate-800 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div
+                            class="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
+                            <span class="text-white font-bold">ЮСК</span>
+                        </div>
+                        <span class="text-xl font-bold">ЮГСервисКомплекс</span>
+                    </div>
+                    <p class="text-slate-400 text-sm">Ремонт и обслуживание техники в Сочи. Работаем с организациями и
+                        частными лицами.</p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4">Реквизиты</h4>
+                    <p class="text-slate-400 text-sm">ИНН 2366040457<br>ОГРН 1232300014858<br>БИК 046015602<br>р/с
+                        40702810430060095955</p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-4">Контакты</h4>
+                    <p class="text-slate-400 text-sm">г. Сочи, ул. Донская, 10, офис 107<br>тел: +7 (989)
+                        168-00-48<br>email: usk2023@mail.ru</p>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-700 mt-8 pt-8 text-center text-slate-500 text-sm">
+                © 2023-2025 ЮГСервисКомплекс. Все права защищены. <a href="#" class="hover:text-white">Политика
+                    конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== КНОПКА НАВЕРХ ========== -->
+    <button id="scrollToTop"
+        class="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl shadow-lg hidden lg:flex items-center justify-center transition-all hover:shadow-xl">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ========== МОБИЛЬНАЯ НИЖНЯЯ НАВИГАЦИЯ ========== -->
+    <div class="fixed bottom-0 left-0 right-0 glass border-t border-slate-200/50 lg:hidden z-40">
+        <div class="flex justify-around items-center py-2">
+            <a href="#home" class="flex flex-col items-center text-blue-600">
+                <i class="fas fa-home text-xl mb-1"></i>
+                <span class="text-xs font-medium">Главная</span>
+            </a>
+            <a href="#services" class="flex flex-col items-center text-slate-600">
+                <i class="fas fa-cogs text-xl mb-1"></i>
+                <span class="text-xs font-medium">Услуги</span>
+            </a>
+            <button onclick="openModal()" class="flex flex-col items-center text-slate-600">
+                <i class="fas fa-edit text-xl mb-1"></i>
+                <span class="text-xs font-medium">Заявка</span>
+            </button>
+            <a href="#contacts" class="flex flex-col items-center text-slate-600">
+                <i class="fas fa-phone text-xl mb-1"></i>
+                <span class="text-xs font-medium">Контакты</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- ========== МОДАЛЬНОЕ ОКНО ЗАЯВКИ ========== -->
+    <div id="modalOverlay"
+        class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div id="modalContent" class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl relative animate-fade-in-up">
+            <button id="modalClose"
+                class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition-colors">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+            <div class="modal-icon">
+                <i class="fas fa-pen"></i>
+            </div>
+            <h3 class="text-3xl font-bold text-center mb-2">Оставить заявку</h3>
+            <p class="text-center text-slate-500 text-sm mb-6">Мы свяжемся с вами в ближайшее время</p>
+            <form id="modalForm">
+                <div class="mb-4">
+                    <input type="text" placeholder="Ваше имя *"
+                        class="w-full px-5 py-4 rounded-xl border border-slate-200 focus:border-blue-500 outline-none"
+                        required>
+                </div>
+                <div class="mb-4">
+                    <input type="tel" placeholder="+7 (___) ___-__-__ *"
+                        class="w-full px-5 py-4 rounded-xl border border-slate-200 focus:border-blue-500 outline-none"
+                        required>
+                </div>
+                <div class="mb-6">
+                    <textarea placeholder="Что нужно сделать?" rows="3"
+                        class="w-full px-5 py-4 rounded-xl border border-slate-200 focus:border-blue-500 outline-none"></textarea>
+                </div>
+                <button type="submit"
+                    class="w-full px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-bold hover:shadow-lg transition-all">
+                    Отправить
+                </button>
+                <p class="text-xs text-slate-400 mt-4 text-center">Нажимая кнопку, вы соглашаетесь с обработкой
+                    персональных данных</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- ========== СКРИПТЫ ========== -->
+    <script>
+        // Глобальная функция открытия модального окна
+        function openModal() {
+            const overlay = document.getElementById('modalOverlay');
+            if (overlay) {
+                overlay.classList.remove('hidden');
+                overlay.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('ЮГСервисКомплекс: инициализация...');
+
+            // === Навигация и мобильное меню ===
+            const menuBtn = document.getElementById('menuButton');
+            const mobileMenu = document.getElementById('mobileMenu');
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    mobileMenu.classList.toggle('hidden');
+                    menuBtn.innerHTML = mobileMenu.classList.contains('hidden')
+                        ? '<i class="fas fa-bars text-xl"></i>'
+                        : '<i class="fas fa-times text-xl"></i>';
+                });
+
+                document.addEventListener('click', function (e) {
+                    if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target) && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        menuBtn.innerHTML = '<i class="fas fa-bars text-xl"></i>';
+                    }
+                });
+
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        menuBtn.innerHTML = '<i class="fas fa-bars text-xl"></i>';
+                    }
+                });
+            }
+
+            // === Плавная прокрутка к якорям ===
+            document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const targetId = this.getAttribute('href');
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        e.preventDefault();
+                        const headerHeight = window.innerWidth < 1024 ? 60 : 80;
+                        const targetPos = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+                        window.scrollTo({ top: targetPos, behavior: 'smooth' });
+
+                        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                            mobileMenu.classList.add('hidden');
+                            menuBtn.innerHTML = '<i class="fas fa-bars text-xl"></i>';
+                        }
+                    }
+                });
+            });
+
+            // === Липкий хедер ===
+            const header = document.querySelector('header');
+            if (header) {
+                window.addEventListener('scroll', function () {
+                    if (window.scrollY > 50) {
+                        header.classList.add('bg-white/95', 'shadow-md', 'backdrop-blur-sm');
+                    } else {
+                        header.classList.remove('bg-white/95', 'shadow-md', 'backdrop-blur-sm');
+                    }
+                });
+            }
+
+            // === Кнопка "Наверх" ===
+            const scrollBtn = document.getElementById('scrollToTop');
+            if (scrollBtn) {
+                window.addEventListener('scroll', function () {
+                    scrollBtn.classList.toggle('hidden', window.scrollY < 300);
+                    scrollBtn.classList.toggle('flex', window.scrollY >= 300);
+                });
+                scrollBtn.addEventListener('click', function () {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            // === Модальное окно ===
+            const overlay = document.getElementById('modalOverlay');
+            const closeBtn = document.getElementById('modalClose');
+            const modalForm = document.getElementById('modalForm');
+
+            if (overlay && closeBtn && modalForm) {
+                closeBtn.addEventListener('click', function () {
+                    overlay.classList.add('hidden');
+                    overlay.classList.remove('flex');
+                    document.body.style.overflow = '';
+                });
+
+                overlay.addEventListener('click', function (e) {
+                    if (e.target === overlay) {
+                        overlay.classList.add('hidden');
+                        overlay.classList.remove('flex');
+                        document.body.style.overflow = '';
+                    }
+                });
+
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape' && !overlay.classList.contains('hidden')) {
+                        overlay.classList.add('hidden');
+                        overlay.classList.remove('flex');
+                        document.body.style.overflow = '';
+                    }
+                });
+
+                modalForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    showNotification('Спасибо! Мы свяжемся с вами.', 'success');
+                    overlay.classList.add('hidden');
+                    overlay.classList.remove('flex');
+                    document.body.style.overflow = '';
+                    modalForm.reset();
+                });
+            }
+
+            // === Обработка основной контактной формы ===
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    showNotification('Спасибо! Мы свяжемся с вами.', 'success');
+                    contactForm.reset();
+                });
+
+                contactForm.querySelectorAll('input[type="tel"]').forEach(input => {
+                    input.addEventListener('input', function (e) {
+                        e.target.value = e.target.value.replace(/[^\d\s\-\+\(\)]/g, '');
+                    });
+                });
+            }
+
+            // === Таблица услуг ===
+            const servicesData = [
+                { category: 'printers', name: 'Диагностика принтера', desc: 'Выявление неисправности, проверка всех узлов', price: '0' },
+                { category: 'printers', name: 'Замена картриджа (лазерный)', desc: 'Совместимый картридж высокого качества', price: 'от 800' },
+                { category: 'printers', name: 'Ремонт блока питания', desc: 'Восстановление или замена блока питания', price: 'от 1500' },
+                { category: 'printers', name: 'Профилактика МФУ', desc: 'Чистка, смазка, замена роликов', price: '1200' },
+                { category: 'pc', name: 'Диагностика ноутбука/ПК', desc: 'Бесплатно при ремонте', price: '0' },
+                { category: 'pc', name: 'Чистка от пыли, замена термопасты', desc: 'Для ноутбуков и ПК', price: 'от 1200' },
+                { category: 'pc', name: 'Замена клавиатуры ноутбука', desc: 'Подбор и установка новой клавиатуры', price: 'от 1500' },
+                { category: 'pc', name: 'Замена матрицы ноутбука', desc: 'Оригинальная или совместимая', price: 'от 3500' },
+                { category: 'pc', name: 'Установка Windows, драйверов', desc: 'Лицензия или сборка', price: '1000' },
+                { category: 'pc', name: 'Ремонт монитора', desc: 'Замена подсветки, блока питания', price: 'от 2000' },
+                { category: 'pc', name: 'Замена ИБП (аккумуляторов)', desc: 'Диагностика и замена', price: 'от 1000' },
+                { category: 'cctv', name: 'Монтаж камеры видеонаблюдения', desc: 'Установка и настройка, прокладка кабеля', price: 'от 2500' },
+                { category: 'cctv', name: 'Настройка видеорегистратора', desc: 'Подключение, удалённый доступ', price: '2000' },
+                { category: 'vent', name: 'Чистка вентиляции', desc: 'Механическая чистка воздуховодов', price: 'от 3000' },
+                { category: 'vent', name: 'Ремонт вентилятора', desc: 'Диагностика, замена двигателя', price: 'от 2500' },
+                { category: 'industrial', name: 'Ремонт станков', desc: 'Диагностика и восстановление', price: 'договорная' },
+                { category: 'industrial', name: 'Обслуживание производственных линий', desc: 'Плановое ТО', price: 'договорная' },
+                { category: 'av', name: 'Настройка конференц-системы', desc: 'Подключение микрофонов, камер', price: 'от 3500' },
+                { category: 'av', name: 'Установка аудиооборудования', desc: 'Монтаж и настройка звука', price: 'от 3000' },
+                { category: 'large', name: 'Ремонт плоттера', desc: 'Механика, электроника', price: 'от 4000' },
+                { category: 'large', name: 'Ремонт ризографа', desc: 'Диагностика, восстановление', price: 'от 4000' },
+            ];
+
+            const categoryNames = {
+                all: 'Все',
+                printers: 'Принтеры и МФУ',
+                pc: 'Ноутбуки, ПК, мониторы',
+                cctv: 'Видеонаблюдение',
+                vent: 'Вентиляция и кондиционирование',
+                industrial: 'Производственное оборудование',
+                av: 'Аудио/видео',
+                large: 'Плоттеры, ризографы'
+            };
+
+            const filtersContainer = document.getElementById('service-filters');
+            const tableBody = document.getElementById('services-table-body');
+
+            if (filtersContainer && tableBody) {
+                Object.keys(categoryNames).forEach(cat => {
+                    const btn = document.createElement('button');
+                    btn.className = `filter-btn px-6 py-3 rounded-full font-medium transition-all ${cat === 'all' ? 'bg-blue-600 text-white' : 'bg-white text-slate-700 hover:bg-blue-100'
+                        }`;
+                    btn.dataset.filter = cat;
+                    btn.textContent = categoryNames[cat];
+                    btn.addEventListener('click', function () {
+                        document.querySelectorAll('.filter-btn').forEach(b => {
+                            b.classList.remove('bg-blue-600', 'text-white');
+                            b.classList.add('bg-white', 'text-slate-700', 'hover:bg-blue-100');
+                        });
+                        this.classList.remove('bg-white', 'text-slate-700', 'hover:bg-blue-100');
+                        this.classList.add('bg-blue-600', 'text-white');
+                        renderServicesTable(this.dataset.filter);
+                    });
+                    filtersContainer.appendChild(btn);
+                });
+
+                function renderServicesTable(category) {
+                    const filtered = category === 'all'
+                        ? servicesData
+                        : servicesData.filter(s => s.category === category);
+
+                    tableBody.innerHTML = filtered.map(service => `
+                    <tr class="bg-white border-b hover:bg-slate-50">
+                        <td class="px-6 py-4 font-medium">${service.name}</td>
+                        <td class="px-6 py-4">${service.desc}</td>
+                        <td class="px-6 py-4">${service.price}</td>
+                    </tr>
+                `).join('');
+                }
+
+                renderServicesTable('all');
+            }
+
+            function showNotification(message, type = 'info') {
+                const notification = document.createElement('div');
+                notification.className = `fixed top-24 right-4 z-50 px-6 py-4 rounded-lg shadow-lg transition-all duration-300 ${type === 'success' ? 'bg-green-500 text-white' :
+                        type === 'error' ? 'bg-red-500 text-white' : 'bg-blue-500 text-white'
+                    }`;
+                notification.textContent = message;
+                notification.style.opacity = '0';
+                notification.style.transform = 'translateX(100px)';
+                document.body.appendChild(notification);
+
+                setTimeout(() => {
+                    notification.style.opacity = '1';
+                    notification.style.transform = 'translateX(0)';
+                }, 10);
+
+                setTimeout(() => {
+                    notification.style.opacity = '0';
+                    notification.style.transform = 'translateX(100px)';
+                    setTimeout(() => notification.remove(), 300);
+                }, 4000);
+            }
+
+            // Подсветка активного пункта в нижней навигации
+            const bottomNavLinks = document.querySelectorAll('.fixed.bottom-0 a');
+            const bottomNavButtons = document.querySelectorAll('.fixed.bottom-0 button');
+            const allBottomItems = [...bottomNavLinks, ...bottomNavButtons];
+
+            function updateActiveBottomNav() {
+                const hash = window.location.hash || '#home';
+                allBottomItems.forEach(item => {
+                    const href = item.getAttribute('href');
+                    if (href === hash) {
+                        item.classList.replace('text-slate-600', 'text-blue-600');
+                    } else {
+                        item.classList.replace('text-blue-600', 'text-slate-600');
+                    }
+                });
+            }
+
+            window.addEventListener('hashchange', updateActiveBottomNav);
+            updateActiveBottomNav();
+        });
+
+        // Дополнительная защита от копирования
+        document.addEventListener('contextmenu', e => e.preventDefault());
+        document.addEventListener('keydown', e => {
+            // Блокируем Ctrl+C, Ctrl+X, Ctrl+S, Ctrl+P, PrintScreen и т.д.
+            if (e.ctrlKey || e.metaKey) {
+                if (e.key === 'c' || e.key === 'x' || e.key === 's' || e.key === 'p' || e.key === 'u' || e.key === 'a') {
+                    e.preventDefault();
+                }
+            }
+            if (e.key === 'PrintScreen') {
+                e.preventDefault();
+                alert('Скриншоты заблокированы для защиты контента.');
+            }
+        });
+    </script>
+
+</body>
+
+</html>

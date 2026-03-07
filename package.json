@@ -1,0 +1,12 @@
+{
+  "name": "yugservice-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+ "scripts": {
+  "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+  "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+  "serve": "live-server --port=3000",
+  "dev": "concurrently \"npm run watch\" \"npm run serve\""
+}
+}
