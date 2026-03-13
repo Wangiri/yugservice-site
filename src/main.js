@@ -32,6 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
     initForms();
     initServicesTable();
     initModal(); // должна быть вызвана после определения функций
+
+    // Подсветка активного пункта в нижней навигации
+    updateActiveBottomNav();
+    window.addEventListener('hashchange', updateActiveBottomNav);
     
     // Кнопка "Наверх"
     const scrollBtn = document.getElementById('scrollToTop');
@@ -107,12 +111,36 @@ function initStickyHeader() {
 }
 
 function initMobileBottomNav() {
-    const navItems = document.querySelectorAll('.fixed.bottom-0 a');
+    const navItems = document.querySelectorAll('.fixed.bottom-0 a, .fixed.bottom-0 button');
     navItems.forEach(item => {
         item.addEventListener('click', (e) => {
-            navItems.forEach(i => i.classList.replace('text-blue-600', 'text-slate-600'));
-            item.classList.replace('text-slate-600', 'text-blue-600');
+            // Если это ссылка, подсвечиваем её, иначе сбрасываем все
+            if (item.tagName === 'A') {
+                navItems.forEach(i => i.classList.replace('text-blue-600', 'text-slate-600'));
+                item.classList.replace('text-slate-600', 'text-blue-600');
+            } else {
+                // Для кнопки "Заявка" просто сбрасываем активность с других
+                navItems.forEach(i => i.classList.replace('text-blue-600', 'text-slate-600'));
+            }
         });
+    });
+}
+
+function updateActiveBottomNav() {
+    const hash = window.location.hash || '#home';
+    const navItems = document.querySelectorAll('.fixed.bottom-0 a, .fixed.bottom-0 button');
+    navItems.forEach(item => {
+        if (item.tagName === 'A') {
+            const href = item.getAttribute('href');
+            if (href === hash) {
+                item.classList.replace('text-slate-600', 'text-blue-600');
+            } else {
+                item.classList.replace('text-blue-600', 'text-slate-600');
+            }
+        } else {
+            // Кнопка "Заявка" всегда серая, если не активна
+            item.classList.replace('text-blue-600', 'text-slate-600');
+        }
     });
 }
 
@@ -366,3 +394,17 @@ function initModal() {
         }
     });
 }
+
+// ========== ЗАЩИТА ОТ КОПИРОВАНИЯ ==========
+document.addEventListener('contextmenu', e => e.preventDefault());
+document.addEventListener('keydown', e => {
+    if (e.ctrlKey || e.metaKey) {
+        if (['c', 'x', 's', 'p', 'u', 'a'].includes(e.key)) {
+            e.preventDefault();
+        }
+    }
+    if (e.key === 'PrintScreen') {
+        e.preventDefault();
+        alert('Скриншоты заблокированы для защиты контента.');
+    }
+});
