@@ -1,5 +1,26 @@
 // src/main.js – единый файл для всего сайта
 
+// Telegram Bot settings
+const TELEGRAM_TOKEN = '8736967035:AAEUXZ-UjVJ4IAOg4qTfnYXhLm0y-rKJ95c';
+const TELEGRAM_CHAT_ID = '5773662616';
+
+async function sendToTelegram(message) {
+    const url = `https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage`;
+    const response = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            chat_id: TELEGRAM_CHAT_ID,
+            text: message,
+            parse_mode: 'HTML',
+        }),
+    });
+    if (!response.ok) {
+        throw new Error('Ошибка отправки в Telegram');
+    }
+    return await response.json();
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     console.log('ЮГСервисКомплекс: инициализация...');
     
@@ -9,7 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initMobileBottomNav();
     initAnimations();
     initForms();
-    initServicesTable(); // новая функция для таблицы услуг
+    initServicesTable();
+    initModal(); // должна быть вызвана после определения функций
     
     // Кнопка "Наверх"
     const scrollBtn = document.getElementById('scrollToTop');
@@ -148,8 +170,22 @@ function initForms() {
             return;
         }
 
-        showNotification('Спасибо! Мы свяжемся с вами в ближайшее время.', 'success');
-        contactForm.reset();
+        const telegramMessage = `
+<b>Новая заявка с сайта</b>
+<b>Имя:</b> ${name}
+<b>Телефон:</b> ${phone}
+<b>Сообщение:</b> ${message || 'не указано'}
+<b>Страница:</b> ${window.location.href}
+        `.trim();
+
+        try {
+            await sendToTelegram(telegramMessage);
+            showNotification('Спасибо! Мы свяжемся с вами в ближайшее время.', 'success');
+            contactForm.reset();
+        } catch (error) {
+            console.error('Telegram error:', error);
+            showNotification('Ошибка отправки. Попробуйте позже или позвоните нам.', 'error');
+        }
     });
 
     contactForm.querySelectorAll('input[type="tel"]').forEach(input => {
@@ -207,7 +243,6 @@ const servicesData = [
     { category: 'large', name: 'Ремонт ризографа', desc: 'Диагностика, восстановление', price: 'от 4000' },
 ];
 
-// Соответствие ключ -> название для кнопок фильтров
 const categoryNames = {
     all: 'Все',
     printers: 'Принтеры и МФУ',
@@ -224,9 +259,7 @@ function initServicesTable() {
     const tableBody = document.getElementById('services-table-body');
     if (!filtersContainer || !tableBody) return;
 
-    // Создаём кнопки фильтров
-    const categories = Object.keys(categoryNames);
-    categories.forEach(cat => {
+    Object.keys(categoryNames).forEach(cat => {
         const btn = document.createElement('button');
         btn.className = `filter-btn px-6 py-3 rounded-full font-medium transition-all ${
             cat === 'all' ? 'bg-blue-600 text-white' : 'bg-white text-slate-700 hover:bg-blue-100'
@@ -234,21 +267,17 @@ function initServicesTable() {
         btn.dataset.filter = cat;
         btn.textContent = categoryNames[cat];
         btn.addEventListener('click', () => {
-            // Убираем активный класс у всех
             document.querySelectorAll('.filter-btn').forEach(b => {
                 b.classList.remove('bg-blue-600', 'text-white');
                 b.classList.add('bg-white', 'text-slate-700', 'hover:bg-blue-100');
             });
-            // Добавляем активный нажатой кнопке
             btn.classList.remove('bg-white', 'text-slate-700', 'hover:bg-blue-100');
             btn.classList.add('bg-blue-600', 'text-white');
-            
             renderServicesTable(cat);
         });
         filtersContainer.appendChild(btn);
     });
 
-    // Первоначальный рендер
     renderServicesTable('all');
 }
 
@@ -277,14 +306,12 @@ function initModal() {
 
     if (!overlay || !closeBtn || !modalForm) return;
 
-    // Открыть модалку
     window.openModal = () => {
         overlay.classList.remove('hidden');
         overlay.classList.add('flex');
         document.body.style.overflow = 'hidden';
     };
 
-    // Закрыть модалку
     const closeModal = () => {
         overlay.classList.add('hidden');
         overlay.classList.remove('flex');
@@ -297,21 +324,45 @@ function initModal() {
         if (e.target === overlay) closeModal();
     });
 
-    modalForm.addEventListener('submit', (e) => {
+    modalForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        // Здесь можно отправить форму аналогично contactForm
-        showNotification('Спасибо! Мы свяжемся с вами.', 'success');
-        closeModal();
-        modalForm.reset();
+        const name = modalForm.querySelector('input[type="text"]').value.trim();
+        const phone = modalForm.querySelector('input[type="tel"]').value.trim();
+        const message = modalForm.querySelector('textarea').value.trim();
+
+        if (!name || !phone) {
+            showNotification('Заполните имя и телефон', 'error');
+            return;
+        }
+
+        const phoneDigits = phone.replace(/\D/g, '');
+        if (phoneDigits.length < 10 || phoneDigits.length > 11) {
+            showNotification('Введите корректный номер телефона', 'error');
+            return;
+        }
+
+        const telegramMessage = `
+<b>Новая заявка (модальное окно)</b>
+<b>Имя:</b> ${name}
+<b>Телефон:</b> ${phone}
+<b>Сообщение:</b> ${message || 'не указано'}
+<b>Страница:</b> ${window.location.href}
+        `.trim();
+
+        try {
+            await sendToTelegram(telegramMessage);
+            showNotification('Спасибо! Мы свяжемся с вами.', 'success');
+            closeModal();
+            modalForm.reset();
+        } catch (error) {
+            console.error('Telegram error:', error);
+            showNotification('Ошибка отправки. Попробуйте позже.', 'error');
+        }
     });
 
-    // Закрытие по Escape
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && !overlay.classList.contains('hidden')) {
             closeModal();
         }
     });
 }
-
-// Вызвать в DOMContentLoaded
-initModal();
