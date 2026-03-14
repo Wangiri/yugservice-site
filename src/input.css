@@ -99,6 +99,7 @@ html {
         font-size: 16px !important;
     }
 }
+
 /* Модальное окно */
 #modalOverlay {
     transition: opacity 0.3s ease;
@@ -109,6 +110,7 @@ html {
     max-height: 90vh;
     overflow-y: auto;
 }
+
 /* Карусель логотипов */
 .carousel-container {
     width: 100%;
@@ -121,7 +123,6 @@ html {
 .carousel-track {
     display: inline-flex;
     animation: scroll 40s linear infinite;
-    /* скорость можно регулировать */
     will-change: transform;
 }
 
@@ -144,12 +145,42 @@ html {
     100% {
         transform: translateX(-50%);
     }
-
-    /* сдвиг на половину ширины трека */
 }
 
 @media (max-width: 768px) {
     .carousel-item {
         width: 140px;
         margin: 0 15px;
-    } }
+    }
+}
+
+/* Hero‑изображение — адаптация */
+.hero-image {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+    .glass.p-10 {
+        padding: 1.5rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .glass.p-10 {
+        padding: 1rem !important;
+    }
+
+    /* скрываем текст логотипа на узких экранах */
+    .logo-text,
+    .logo-sub {
+        display: none !important;
+    }
+}
+
+/* Кнопка "наверх" — поднимаем над нижней панелью */
+@media (max-width: 1023px) {
+    #scrollToTop {
+        bottom: 80px !important;
+    }
+}
