@@ -24,14 +24,13 @@ async function sendToTelegram(message) {
 document.addEventListener('DOMContentLoaded', () => {
     console.log('ЮГСервисКомплекс: инициализация...');
     
-    initNavigation();
     initSmoothScroll();
     initStickyHeader();
     initMobileBottomNav();
     initAnimations();
     initForms();
     initServicesTable();
-    initModal(); // должна быть вызвана после определения функций
+    initModal();
 
     // Подсветка активного пункта в нижней навигации
     updateActiveBottomNav();
@@ -49,34 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ========== НАВИГАЦИЯ ==========
-function initNavigation() {
-    const menuBtn = document.getElementById('menuButton');
-    const mobileMenu = document.getElementById('mobileMenu');
-    if (!menuBtn || !mobileMenu) return;
-
-    menuBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        mobileMenu.classList.toggle('hidden');
-        menuBtn.innerHTML = mobileMenu.classList.contains('hidden') 
-            ? '<i class="fas fa-bars text-xl"></i>' 
-            : '<i class="fas fa-times text-xl"></i>';
-    });
-
-    document.addEventListener('click', (e) => {
-        if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target) && !mobileMenu.classList.contains('hidden')) {
-            mobileMenu.classList.add('hidden');
-            menuBtn.innerHTML = '<i class="fas fa-bars text-xl"></i>';
-        }
-    });
-
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
-            mobileMenu.classList.add('hidden');
-            menuBtn.innerHTML = '<i class="fas fa-bars text-xl"></i>';
-        }
-    });
-}
-
 function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
@@ -87,12 +58,6 @@ function initSmoothScroll() {
                 const headerHeight = window.innerWidth < 1024 ? 60 : 80;
                 const targetPos = target.getBoundingClientRect().top + window.scrollY - headerHeight;
                 window.scrollTo({ top: targetPos, behavior: 'smooth' });
-                
-                const mobileMenu = document.getElementById('mobileMenu');
-                if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
-                    document.getElementById('menuButton').innerHTML = '<i class="fas fa-bars text-xl"></i>';
-                }
             }
         });
     });
@@ -114,12 +79,10 @@ function initMobileBottomNav() {
     const navItems = document.querySelectorAll('.fixed.bottom-0 a, .fixed.bottom-0 button');
     navItems.forEach(item => {
         item.addEventListener('click', (e) => {
-            // Если это ссылка, подсвечиваем её, иначе сбрасываем все
             if (item.tagName === 'A') {
                 navItems.forEach(i => i.classList.replace('text-blue-600', 'text-slate-600'));
                 item.classList.replace('text-slate-600', 'text-blue-600');
             } else {
-                // Для кнопки "Заявка" просто сбрасываем активность с других
                 navItems.forEach(i => i.classList.replace('text-blue-600', 'text-slate-600'));
             }
         });
@@ -138,7 +101,6 @@ function updateActiveBottomNav() {
                 item.classList.replace('text-blue-600', 'text-slate-600');
             }
         } else {
-            // Кнопка "Заявка" всегда серая, если не активна
             item.classList.replace('text-blue-600', 'text-slate-600');
         }
     });
